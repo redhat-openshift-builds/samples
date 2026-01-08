@@ -1,0 +1,7 @@
+apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildah-dockerfile-buildrun
+spec:
+  build:
+    name: buildah-dockerfile-build
