@@ -1,0 +1,7 @@
+apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: s2i-java-buildrun
+spec:
+  build:
+    name: s2i-java-build
