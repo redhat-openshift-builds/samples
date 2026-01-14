@@ -1,7 +1,10 @@
 FROM registry.access.redhat.com/ubi9/ubi:latest
-
-RUN dnf --enablerepo=codeready-builder-for-rhel-9-x86_64-rpms install \
-    cloud-init \
-    nss_wrapper \
-    uid_wrapper -y && \
-    dnf clean all -y
+ARG ORG_ID
+ARG KEY_NAME
+RUN subscription-manager register \
+      --org=${ORG_ID} \
+      --activationkey=${KEY_NAME} && \
+    dnf module enable nodejs:20 && \
+    dnf install -y nodejs && \
+    subscription-manager unregister && \
+    dnf clean all
