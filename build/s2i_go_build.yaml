@@ -1,0 +1,19 @@
+apiVersion: shipwright.io/v1beta1
+kind: Build
+metadata:
+  name: s2i-go-build
+spec:
+  source:
+    type: Git
+    git:
+      url: https://github.com/avinal/builds-samples
+      revision: avinal/build-sample
+    contextDir: s2i/go
+  strategy:
+    name: source-to-image
+    kind: ClusterBuildStrategy
+  paramValues:
+  - name: builder-image
+    value: registry.access.redhat.com/ubi9/go-toolset:latest
+  output:
+    image: image-registry.openshift-image-registry.svc:5000/builds-sample/s2i-go-build:latest

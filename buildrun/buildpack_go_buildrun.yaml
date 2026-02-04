@@ -1,0 +1,7 @@
+apiVersion: shipwright.io/v1beta1
+kind: BuildRun
+metadata:
+  name: buildpack-go-buildrun
+spec:
+  build:
+    name: buildpack-go-build
