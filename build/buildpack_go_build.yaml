@@ -14,7 +14,7 @@ spec:
     atBuildDeletion: true
   paramValues:
     - name: run-image
-      value: paketobuildpacks/run-ubi8-base:latest
+      value: paketobuildpacks/ubuntu-noble-run:latest
     - name: cnb-builder-image
       value: paketobuildpacks/builder-jammy-tiny:latest
     - name: source-subpath
