@@ -1,0 +1,6 @@
+[_]
+schema-version = "0.2"
+
+[[build.env]]
+name = "BP_PIP_VERSION"
+value = "25.*"

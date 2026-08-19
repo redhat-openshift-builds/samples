@@ -16,7 +16,7 @@ spec:
     - name: run-image
       value: paketobuildpacks/ubuntu-noble-run:latest
     - name: cnb-builder-image
-      value: paketobuildpacks/builder-jammy-tiny:latest
+      value: paketobuildpacks/ubuntu-noble-builder:latest
     - name: source-subpath
       value: "buildpack/go"
   output:
