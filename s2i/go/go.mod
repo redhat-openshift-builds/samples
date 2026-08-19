@@ -1,3 +1,3 @@
-module github.com/redhat-openshift-builds/samples/buildah-build
+module github.com/redhat-openshift-builds/samples/s2i-go
 
-go 1.25
+go 1.26

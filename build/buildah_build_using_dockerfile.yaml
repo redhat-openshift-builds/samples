@@ -11,6 +11,8 @@ spec:
   strategy:
     name: buildah
     kind: ClusterBuildStrategy
+  retention:
+    atBuildDeletion: true
   paramValues:
     - name: dockerfile
       value: Dockerfile
